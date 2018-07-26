@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>프로젝트 기획</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        body{text-align: center}
+        /*work라는 이름의 클래스에 있는 div*/
+        /*직계자식 기호 : >*/
+        /*같은 의미 다른표현
+        태그==요소==선택자==엘리먼트*/
+        div.work{
+            background-color: skyblue;
+        }
+        div.cont{
+            background-color: orange;
+            /*border:선굵기 선스타일 선색상;*/
+            border: 1px solid black;
+            border-width:5px;
+            border-style:dashed;
+            border-style: double;
+            border-color: skyblue;
+            /*위처럼 내용이 중복된 부분은 재정의 된다.*/
+        }
+        div.cont>h3{
+            color:white;
+        }
+        /*class의 활용
+        같은 css효과를 여러 다른 요소에 공통으로 사용하고 싶을 때 사용하기도 한다.
+        밑에.idea는 앞에 div를 생략한 것으로 idea클래스가 붙어있는 모든 선택자를 의미한다(.idea==*.idea/*==모든태그).*/
+        .idea{
+            background-color: bisque;
+        }
+        img{
+        width:300px; height: auto;
+            /*auto는 이미지 비율을 유지하며 넓이에 맞춤*/
+        }
+        .myboarder{border:3px solid orange}
+        .brain{background-color: beige}
+    </style>
+    
+</head>
+<body>
+<div class="wrap" >
+    <h1>프로젝트 기획</h1>
+    <div class="work">
+        <h2>기획안 작업</h2>
+        <h3 class="plan">1. 기획은 웹 콘텐츠의 설계도</h3>
+        <h4>1)목표를 설정</h4>
+        <h4>2)목표 달성을 위한 필수단계</h4>
+        
+        <h3 class="result">2. 기획자의 뚜렷한 주관과 독창성이 담긴 결과물</h3>
+        <h4>1)아이디어는 번뜩이는 섬광</h4>
+        <h4>2)평소에 꾸준한 관심이 중요</h4>
+    </div>
+    <div class="cont">
+        <h2>기획안 내용 작성</h2>
+        <h3>1.안좋은 기획안</h3>
+        <h4>1) 자료만 옮겨 붙인 설득력 없는 내용</h4>
+        <h4>2) 제작목적이 불분명</h4>
+        <h4>3) 내용의 전달력이 미흡</h4>
+        <h3>2.좋은 기획안</h3>
+        <h4>1) 제작해야 할 타당성을 갖춘다.</h4>
+        <h4>2) 적합한 내용으로 일목요연한 구성과 전달</h4>
+        <h4>3) </h4>
+    </div>
+    <div class="idea myboarder brain">
+    <!--클래스안에 띄어쓰기는 클래스 이름 두개 다를 의미하게 된다.-->
+    <h2>아이디어 도출</h2>
+    <h3>아이디어 발상과정</h3>
+    <h4>아이디어는 본인의 지식과 경험내에서만 나온다.</h4>
+    <h4>아이디어를 생각해내는 방법에는 정답이 없다.</h4>
+    <h3>좌뇌형, 우뇌형 인간의 특징</h3>
+    <h4>누구나 꾸준한 훈련을 통해 양쪽 뇌의 기능을 활용할 수 있다.</h4>
+    </div>
+    <div class="idea">
+    <h2>아이디어 발상</h2>
+    <h3>마인드 매핑</h3>
+    <h4>핵심문제와 관련된 여러 요인을 발견하고, 관련 요인에서 아이디어의 단서를 찾고자 할 때 활용한다.</h4>
+    <p><img src="./images/mindmap.jpg" alt="마인드맵"></p>
+    <h3>브레인스토밍</h3>
+    <h4>문제나 해결방법에 대해 최대한 많은 의견을 수집하고 공유하고자 할 때 활용한다.</h4>
+    <p><img src="./images/brainstorming.jpg" alt="브레인스토밍"></p>
+    </div>
+</div>
+</body>
+</html>

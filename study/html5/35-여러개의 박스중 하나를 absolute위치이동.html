@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>여러개의 박스중 하나를 absolute위치 이동</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        p{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            line-height: 100px;
+            text-align: center;
+            background-color: aqua;
+        }
+        p.posbox{
+            position: absolute;
+            /*
+            일반적으로 박스는 캔버스에 딱 붙어있는데 위값을 주면 박스가 살짝 공중에 뜬다. 
+            따라서 그 빈틈으로 주변 요소가 앱솔루트한 요소의 위치로 올라와 뒤에 깔린다.
+            */
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+   <p>박스1</p>
+   <p class="posbox">절대위치지정 박스2</p>
+   <p>박스3</p>
+   <p>박스4</p>
+   <p>박스5</p>
+   <p>박스6</p>
+    
+</body>
+</html>

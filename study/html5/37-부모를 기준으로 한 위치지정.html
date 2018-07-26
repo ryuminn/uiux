@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>부모를 기준으로 한 위치지정</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .parent{
+            position: relative;
+            /*
+            -기준점 설정
+            (해당요소의 이동이 목적이 아니라 앱솔루트할 요소의 기준점으로 설정하기 위함이다.)
+            -따라서 body가 아닌 새로운 기준점을 기준으로 이동하게된다.
+            */
+            width: 400px;
+            height: 400px;
+            margin: 100px 0 0 100px;
+            background-color: bisque;
+        }
+        .parent>.child{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <p class="child">자식</p>
+</div>
+</body>
+</html>

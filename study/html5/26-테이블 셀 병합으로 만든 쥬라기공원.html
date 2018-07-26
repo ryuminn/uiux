@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 셀 병합으로 만든 쥬라기공원</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        h1{
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        table{
+            width: 500px;
+            margin: 0 auto;
+        }
+        th{
+            height: 40px;
+            border: 1px solid black;
+        }
+        td{
+            height: 40px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+   <header>
+       <h1>쥬라기 공원 요금표</h1>
+   </header>
+   
+   <section>
+       <table>
+          <tr>
+            <td colspan="3">요금안내</td>
+          </tr>
+           <th scope="row">구분</th>
+           <th scope="col">프리미엄</th>
+           <th scope="col">스페셜</th>
+           <tr>
+               <td scope="row">성인</td>
+               <td>10,000원</td>
+               <td>30,000원</td>
+           </tr>
+           <tr>
+               <td scope="row">청소년</td>
+               <td>5,000원</td>
+               <td>15,000원</td>
+           </tr>
+           <tr>
+               <td scope="row">소인</td>
+               <td colspan="2">초등학생 이하 무조건 3,000원</td>
+           </tr>
+            <tr>
+               <td scope="row" rowspan="2">공연시간</td>
+               <td>오전</td>
+               <td>10 ~ 11시</td>
+           </tr>
+            <tr>
+               <td>오후</td>
+               <td>14 ~ 15시</td>
+           </tr>
+>
+       </table>
+   </section>
+</div>
+</body>
+</html>

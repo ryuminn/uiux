@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 만들기</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+			#wrap{
+				width:650px;
+				margin:0 auto;
+			}
+			
+			h1{font-size:20px;text-align:center;}
+			hr{margin:30px 0;}
+			
+			/*
+				th는 굵은글씨, 가세정렬이 기본설정됨
+			  th는 테이블 컬럼에 사용된 자료를 구분하기 위해 쓰임
+				열에 대한 제목 scope="col"
+			  행에 대한 제목 scope="row"
+			
+				td는 세로중앙정렬만 기본설정됨
+				
+			
+				셀(td) 안에서 세로 정렬은 vetical-align 속성 이용
+			*/
+			
+			table{
+				/*셀간격과 2중테두리가 완벽하게 통합*/
+				border-collapse:collapse;
+			}
+			
+			th{
+				width:150px;
+				height:50px;
+				border:1px solid black;
+			}
+			
+			td{
+				width:150px;
+				height:50px;
+				text-align:center;
+				border:1px solid black;
+				vertical-align:top;
+				vertical-align:bottom;
+				vertical-align:middle;
+			}
+    </style>
+</head>
+<body>
+<div id="wrap">
+	
+	<header><h1>테이블은 표로된 정보를 나타낼 때만 사용</h1></header>
+	
+	<section>
+		
+		<h2>1행 1열</h2>
+		<table>
+			<tr>
+				<td>1행 1열</td>
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<h2>1행 2열</h2>
+		<table>
+			<tr>
+				<td>1-1</td>
+				<td>1-2</td>
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<h2>1행 3열</h2>
+		<table>
+			<tr>
+				<td>1-1</td>
+				<td>1-2</td>
+				<td>1-3</td>
+			</tr>			
+		</table>
+		
+		<hr>
+		
+		<h2>2행 1열</h2>
+		<table>
+			<tr>
+				<td>1-1</td>
+			</tr>
+			<tr>
+				<td>2-1</td>
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<h2>2행 2열</h2>
+		<table>
+			<tr>
+				<td>1-1</td>
+				<td>1-2</td>
+			</tr>
+			<tr>
+				<td>2-1</td>
+				<td>2-2</td>
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<h2>문제) 3행 4열 테이블 만들기</h2>
+		
+		
+		<hr>
+		
+		<h2>UI/UX 출석부</h2>
+		<table>
+			<tr>
+				<th scope="col">이름</th>
+				<th scope="col">연락처</th>
+				<th scope="col">주량</th>
+				<th scope="col">지역</th>
+			</tr>
+			<tr>
+				<td>홍길동</td>
+				<td>010-4526-2546</td>
+				<td>2병</td>
+				<td>무릉도원</td>
+			</tr>
+			<tr>
+				<td>강수지</td>
+				<td>010-5648-7412</td>
+				<td>반병</td>
+				<td>KBS홀</td>
+			</tr>
+			<tr>
+				<td>김유정</td>
+				<td>010-9874-6985</td>
+				<td>1병</td>
+				<td>강남구</td>
+			</tr>
+		</table>
+		
+		<hr>
+		
+		<h2>3행 4열 테이블에서 병합 - colspan, rowspan</h2>
+		<table>
+			<tr>
+				<td>1-1</td>
+				<td colspan="3">1-2</td>
+			</tr>
+			<tr>
+				<td rowspan="2">2-1</td>
+				<td>2-2</td>
+				<td>2-3</td>
+				<td rowspan="2">2-4</td>
+			</tr>
+			<tr>
+				<td colspan="2">3-2</td>
+			</tr>
+		</table>
+		
+	</section>
+	
+</div>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>flaot을 이용한 박스나열</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        hr{position: static; left: 0; margin: 50px 0;}
+        .study>li{
+            float: left;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .study>li:nth-child(1){background-color: aqua;}
+        .study>li:nth-child(2){background-color: aquamarine;}
+        .study>li:nth-child(3){background-color: chartreuse;}
+        .study>li:nth-child(4){background-color: fuchsia;}
+        
+        .clearfix{clear: both;}
+        
+        .subject:after{
+            display: block;
+            clear: both;
+            content: "";
+        }
+        /*<div class="clearfix"></div>와 같은 기능
+        위는 아무 내용없는 태그를 써야하기때문에 위처럼 가상선택자를 통해 사용가능*/
+        .subject>li{
+            float: left;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .subject>li:nth-child(1){background-color: aqua;}
+        .subject>li:nth-child(2){background-color: aquamarine;}
+        .subject>li:nth-child(3){background-color: chartreuse;}
+        .subject>li:nth-child(4){background-color: fuchsia;}
+        
+        .test{*zoom:1;}/*모든 html버전에서 밑 after가상선택자를 인식시키기 위해 의미없이 쓰는 css핵 코드*/
+        .test:after{
+            display: block;
+            clear: both;
+            content: "";
+        }
+        .test>span{
+            display: block;
+            float: left;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .test>span:nth-child(1){background-color: red;}
+        .test>span:nth-child(2){background-color: blue;}
+        .test>span:nth-child(3){background-color: yellow;}
+        .test>span:nth-child(4){background-color: green;}
+        .test>span:nth-child(5){background-color: orange;}
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">float을 이용한 박스나열</h1>
+        <ul class="study">
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+        </ul>
+        <div class="clearfix"></div>
+        <!--
+        float의 끌어당기는 영향력을 차단시키는 마감재 기능
+        float이후에 필수사용
+        -->
+        <p>Hello!</p>
+        
+        <hr>
+        
+        <ol class="subject">
+            <li>ui/ux</li>
+            <li>photoshop</li>
+            <li>illustrator</li>
+            <li>portforlio</li>
+        </ol>
+        
+        <!--<p style="clear:both;">추천과목</p>-->
+        <p>인기과목</p>
+        
+        <hr>
+        
+        <p class="test">
+            <span class="red">red</span>
+            <span class="blue">blue</span>
+            <span class="yellow">yellow</span>
+            <span class="green">green</span>
+            <span class="orange">orange</span>
+        </p>
+        
+        <p>플롯테스트</p>
+    </div>
+</body>
+</html>

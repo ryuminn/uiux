@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{width: 800px; margin: 0 auto;}
+        section{
+            /*
+            내안에서 자손요소가 포지셔닝할 경우 나를 기준으로 좌표설정해라.
+            position이 없으면 left right z-index모두 작동안한다.
+            */
+            position: relative;
+            width: 500px;
+            height: 400px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        section>p{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .red{
+            position: absolute;
+            left: 200px;
+            top: 100px;
+            background-color: red;
+            z-index: 100;
+        }
+        .blue{
+            position: absolute;
+            left: 230px;
+            top: 130px;
+            background-color: blue;
+            z-index: 200;
+        }
+        .yellow{
+            position: absolute;
+            left: 160px;
+            top: 160px;
+            background-color: yellow;
+            z-index: 300;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <h1 class="text-center">Z-index 속성으로 쌓이는 순서 조정</h1>
+    <section>
+        <p class="red">red</p>
+        <p class="blue">blue</p>
+        <p class="yellow">yellow</p>
+    </section>
+</div>
+</body>
+</html>

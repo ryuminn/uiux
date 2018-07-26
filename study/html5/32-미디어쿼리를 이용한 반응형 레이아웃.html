@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float을 이용한 레이아웃</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/32-rwd.css">
+    <style>
+			
+          /*반응형-모바일*/
+        @media screen and (max-width:768px){
+        #wrap{
+            margin: 0;
+            width: 100%;
+            }
+        section>.left{
+            float: none;
+            width: 100%;
+        }
+        section>.cont{
+            float: none;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+			
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+	<header><h1>헤더</h1></header>
+	<section>
+          <article class="left">
+              <div class="lnb">LNB</div>
+              <div class="ad">AD</div>
+           </article>
+		<article class="cont">컨텐츠</article>
+	</section>
+	<footer>풋터</footer>
+</div>    
+            
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title></title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        div#wrap{border:1px solid black;
+        text-align:center; }/*상자 안에 있는 글자를 가운데로 정렬할 때*/
+        
+        p{text-align:left;}
+        
+        h1+p{width: 100px; height:100px;
+        border:5px solid pink;
+        border-radius:50px;
+        line-height: 100px;
+        text-align: center;
+        border-radius:10px 20px 30px 40px; }
+        
+        /*    1         2
+        
+        
+        
+              4         3*/
+            
+        
+        /* div#wrap : id가 wrap인 div선택자  */
+        
+        #wrap>h1{
+            width: 400px; height: 200px;
+            line-height: 200px;/*한 줄의 문장을 박스의 세로 가운데 오게 하기 위해서 줄간격의 값을 높이 값과 일치시킨다.*/
+            border: 10px solid blue;
+            border-radius:20px; }
+        
+        /*id명 wrap이 붙어있는 모든 요소의 직계자식 h1 
+        div가 아닌 다른 형태여도 이름만 wrap이면 된다.*/
+        
+        /*   *은 모든 태그를 뜻함.  */
+        
+    
+        
+        .ball{
+            background-color: mediumaquamarine;
+            width: 150px;height: 150px;
+            line-height: 130px;
+            text-align: center;
+            border:10px solid magenta;
+            box-sizing: border-box;
+            
+            /* 보더를 주면 기본적으로 박스의 바깥쪽에 생성되므로 박스의 크기가 보더 수치만큼 커진다.*/
+            border-radius: 75px;
+       
+            
+            /* 선 바깥쪽으로 보더가 생겨서 크기가 커짐.
+            박스 크기가 170이 됨.
+            
+            선 안쪽으로 보더가 생기게 하기 위해서는 border를 주고 
+            그 밑에 box-sizing : border-box */
+            
+        }
+    </style>
+</head>
+<body>
+   <!--id는 이름 앞에 #표시.
+   절대 중복사용할 수 없다. 
+   
+   만약 ID값이 두 개 이상 있을 경우, 제어할 대상을 찾지 못하고 
+   첫번째 요소만 처리한다. -->
+   
+   <!--아이디는 언제 사용할까?
+   
+   1. id는 레이아웃을 담당하는 요소에 사용.
+   2. 동적인 움직임을 표현하기 위한 자바스크립트와 연동할 때 사용.
+   3. 나머지 요소들은 클래스와 태그 선택자를 이용해서 접근하는 것을 권장.
+   -->
+   
+    <div id = "wrap">
+        <h1>border-radius 학습</h1>
+        <p>사각형</p>
+        
+        <hr>
+        
+        <div>
+            <p class="ball">H</p>
+            <p class="ball">T</p>
+            <p class="ball">M</p>
+            <p class="ball">L</p>
+            <p class="ball">5</p>
+            
+        </div>
+    </div>
+    <!--div#wrap-->
+   
+     
+</body>
+</html> 

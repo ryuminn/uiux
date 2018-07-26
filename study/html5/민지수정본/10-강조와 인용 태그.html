@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title>웹 접근성</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        img{width:200px; height:auto;}
+    /*임베디드 방식*/
+    </style>
+</head>
+<body>
+<div id="wrap"> <!--#wrqp-->
+    <h1>2가지 측면의 웹 접근성</h1><hr>
+    <h2>인간적 측면</h2><!--장애나 성별등에 관계없이 접근이 용이한-->
+    <p>모든 사용자(일반인, 장애인, 노인, 어린이 등)가 차별 없이 이용할 수 있어야 한다.<br>
+    현실적으로 시각장애인을 주 대상으로 하며, 대한민국에는 이를 장애인 차별을 금지하는 법이 있다. <br><br>
+    
+    <h2>기계적 측면</h2><!--모바일과 웹 모두 접근이 용이한-->
+    <p>웹사이트에 접근하는 모든 통신기기(운영체제, 브라우저)의 환경과 관계없이 원활히 이용할 수 있어야 한다. <br>
+        현실적으로 대한민국에서는 크로스 브라우징이 중요하다. <br><br></p>
+   
+    <h2>웹 접근성 품질 인증 마크</h2>
+    <p>
+        <img src="images/wa.jpg" alt="web accessibility">
+    </p><br>
+    
+    <hr>
+    <h2>시멘틱 웹</h2>
+    <p><strong>의미에 맞는 html태그를 적절히 사용</strong>하여 웹 페이지를 제작.</p>
+    <!--strong, em-->
+    
+    <hr>
+    
+    
+    <!--blockquote는 긴 인용문을 표현한다.-->
+    <!--인용은  blockquote를 사용, p태그 안에 들어가지 못한다. -->
+    <blockquote cite="gongja.com"  title="공자 가라사대"  style="margin-left: 0">신체발부 수지부모</blockquote>
+    <!--태그의 속성으로 css스타일링을" 하는 방식을 인라인 방식이라 한다. -->
+    <!--src : attribute (속성)-->
+    
+    
+    
+    <p><q>맹자 가라사대 <em>수업 끝나면 집에 일찍</em> 가자</q></p>
+    <!--em : etalic, strong : bold-->
+    <!--짧은 인용문을 표현하는 q태그-->
+ </div>
+    
+
+</body>
+</html> 
+<!--웹 표준, 웹 접근성, 시멘틱 웹-->

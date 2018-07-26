@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Box Model과 관련된 CSS 속성</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        
+        h1{
+            
+            /*태생이 블럭인 요소들은 쌓이고, 인라인인 요소들은 옆으로 늘어선다. */
+            display:block; /*블럭 요소는 벽돌처럼 쌓여서 화면에 표시*/
+            display:inline; /*재정의 함*/
+            border :1px solid red; }
+        
+        /*
+                + : 인잡형제(동기) 연산자
+        ]
+        */
+        h1+div>P{border:1px solid blue;
+        
+        display: inline;}
+        
+        /*div>p{border: 1px solid orange;}*/
+        
+        /*h1과 형제이면서, h1 바로 다음에 나오는 div태그*/
+    /*h1>p : h1의 직계 자식인 p태그를 가리킴 */
+        
+        
+        div~p{border:1px solid black;}
+        
+        span{
+            
+            display:inline; /*쓰지않아도 기본적으로 써있다. (생략되어있을 뿐 기본속성)*/
+            display: block;
+            /*쓰지않아도 생략되어있는 기본 속성*/
+            
+            /*display : "화면에 표시하는 방식" 이라는 뜻*/
+            
+            
+            /*inline 요소는 옆으로 나란히 배치된다.
+            
+            inline요소는 width 값이 컨텐츠 양만큼이다.
+            
+            
+            
+            
+            block요소는 벽돌처럼 쌓여서 화면에 표시된다. 
+            
+            block요소는 컨텐츠 양에 관게없이 한 줄 전체를 다 차지한다. */
+            
+            
+            border:1px solid blue;}
+        hr{
+            height: 10px;
+            border: 1px solid red;}
+        /*hr은 블럭요소*/
+    
+    </style>
+</head>
+<body>
+   <div id = "wrap">   <!--div의 기본 속성 값이 block이므로 , 
+      div를 상속받으면 속성이 똑같다.-->
+       <h1>
+           웹 브라우저는 모든 html 요소(태그)를 하나의 상자 형태로 표현
+       </h1>
+       
+       <div>
+           <p>첫번째 문단</p>
+           <p>두번째 문단</p>
+           <p>세번째 문단</p>
+           <!--id는 고유하므로 딱 한 번만 나오며, 
+           class는 여러번 사용될 수 있으므로 키값이 되지 못함.-->
+       </div>
+          <p>네번째 문단</p>
+          <p>다섯번째 문단</p>
+          
+          
+          <hr>
+          
+          <span>나는             스팬1</span>
+          <span>나는         스팬2</span>
+          <span>나는     스팬3</span>
+          
+      </div>
+          
+</body>
+</html> 
+
+
+<!--
+~ :인접형제(동기) 연산자
+div~p가 가리키는 태그는 div와 형제이면서, div이후에 나오는 모든 p태그
+-->
+
+<!-- 모든 태그는 inline이나 block 둘 중에 하나의 속성을 갖는다. 
+div => block
+span => inline-->
+
+

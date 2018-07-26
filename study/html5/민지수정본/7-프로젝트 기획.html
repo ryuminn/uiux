@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title>프로젝트 기획</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        
+        /*   .work 클래스를 가진 div 선택자    */
+        div.work{
+            background-color: bisque;
+        }
+        /*
+        같은 의미 다른 표현
+        태그 == 요소 == 선택자 == 엘리먼트 
+        */
+        div.cont{background-color: coral; /*border 선굵기, 선스타일, 선색상*/
+        border:8px solid lightgray;/* solid 가 가장 빈번히 쓰임*/
+        border-width: 8px; /*중복된 부분은 재정의 됨*/
+        border-style:double;
+        border-style:dashed;
+            
+        border-color: antiquewhite;
+        }
+        div.cont>h3{color: white;}
+        /*  div.cont의 자식인 h3 */
+        
+        /*
+        
+        .idea의 해석
+        .idea 클래스가 붙어있는 모든 선택자
+        
+        .idea == *. idea
+        ==> 여기서 *은 모든 태그를 의미한다. 
+        
+        
+        */
+        
+        
+        /*Class의 활용 
+        
+        같은 CSS효과를 여러 다른 요소에 공통으로 적용하고 싶을 때 사용하기도 한다.
+        .idea == *. idea  */
+        
+        
+        .idea{background-color:darkkhaki ;}
+        
+        img{width: 300px;height: auto;}
+        /* 이미지 비율을 유지하면서 너비 값에 잘 맞추기. 원본비율 유지 */
+        
+        .myborder{border:3px solid red;}
+        .brain{background-color: cornflowerblue;
+        }
+        /*클래스를 먼저 정의하고, 아래 소스코드에 붙여 넣는 방식으로 작업할 경우도 있다.*/
+    </style>
+</head>
+<body>
+  <!--body 밑에 바로 나오는 div에 클래스 이름을 붙여줌 
+  ex) wrap. container, wrapper...-->
+   <div class="wrap">
+      <h1>프로젝트 기획</h1> 
+      <hr>
+      <div class = "work">
+        <h2>기획안 작업</h2>
+        <!--class 이름은 띄어쓰기 할 수 없다. -->
+        <h3 class = "plan">1. 기획은 웹 콘텐츠의 설계도</h3>
+        <h4>1)목표를 설정</h4>
+        <h4>2)목표를 성취하기 위한 필수 단계</h4>
+      
+        <h3 class = "result">2. 기획자의 뚜렷한 주관과 독창성이 담긴 결과물</h3>
+        <h4>1) 아이디어는 번뜩이는 섬광</h4>
+        <h4>2) 평소에 꾸준히 관심을 기울여야 한다.</h4>
+      </div>
+      
+      
+      <div class = "cont"><!--cont : content--> 
+        <h2>기획안 내용 작성</h2>
+        <h3>1. 안 좋은 기획안</h3>
+        <h4>1) 자료만 옮겨 붙인 설득력 없는 내용</h4>
+        <h4>2) 제작목적이 불분명하다.</h4>
+        <h4>3) 내용에 대한 전달력이 떨어진다.</h4>
+        
+        
+        <h3>2. 좋은 기획안</h3> 
+        <h4>1) 제작해야 할 타당성을 갖춘다.</h4>
+        <h4>2) 적합한 내용으로 일목요연한 구성 및 전달</h4>
+        
+      </div>    
+      
+      <div class="idea myborder"><!--한 칸 뛰어야 함.-->
+      <!--css에서는 class를 . 으로 표현-->
+      <!--div.idea-->
+       <hr>
+        <h2>아이디어 도출</h2>
+        <hr>
+        <h3>아이디어 발상 과정</h3>
+        <h4>아이디어는 자신이 가진 지식과 경험의 범위 내에서만 떠오른다.</h4>
+        <h4>아이디어를 생각해 내는 방법에는 정답이 없다.</h4>
+        <br><hr>
+        <h3>좌뇌형, 우뇌형 인간의 특징</h3>
+        
+        <h4>누구나 꾸준한 훈련을 통해 양쪽 뇌의 기능을 고르게 활용할 수 있다.</h4>
+        
+      </div>
+      
+      <div class="idea myborder brain">
+       <br><hr>
+        <h2>아이디어 발상</h2>
+        <hr>
+        <h3>마인드 맵핑</h3>
+        <h4>핵심 문제와 관련된 여러 요인들을 발견하고,<br>관련 요인에서 아이디어의 단서를 찾고자 할 때 활용한다.</h4>
+        <p>
+            <img src="./images/mindmap.jpg" alt="마인드 맵핑 예시">
+        </p>
+        <br>
+        <hr>
+        <h3>브레인 스토밍</h3>
+        <h4>문제나 해결방법에 대해 최대한 많은 의견을 수집하고, <br>공유하고자 할 때 활용한다.
+        
+        </h4>
+        <p>
+            <img src="./images/brainstorming.png" alt="brainstorming">
+        </p>
+        
+        
+      </div>   
+      
+                
+   </div>
+    
+</body>
+</html> 

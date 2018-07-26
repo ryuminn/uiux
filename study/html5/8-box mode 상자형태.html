@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model과 관련된 CSS 속성</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        h1{
+            display:block;
+            /*
+            block요소는 벽돌처럼 쌓여서 표현
+            모든 태그들은 div나 span의 속성을 물려받는다.
+            div는 블럭속성을, span은 인라인 속성을 물려준다.
+            예)h1, hr태그는 div, mark와 같은 태그는 span
+            */
+            border: 1px solid #f00;}
+        /*
+        + : 인접형제(동기) 연산자
+        h1+div : h1과 형제이면서 
+        h1바로 나음에 나오는 div 태그의
+        자식인 p를 가르킴
+        */
+        h1+div>p{border:1px solid #00f;}
+        
+        /*
+        ~ : 이접형제(동기) 연산자
+        div~p가 가르키는 태그는
+        div와 형제이면서,
+        div 이후에 나오는 모든 p태그
+        
+        div+p{border:1px solid green;}
+        div+p+p{border:1px solid green;}
+        위 두개는 아래와 같다.
+        */
+        
+        div~p{border:1px solid green;}
+        span{
+            display:inline;
+            /*
+            display는 "화면에 표시하는 방식" 이라는 뜻
+            쓰지않아도 생략되어있는 기본 속성 /태생
+            inline은 옆으로 나열
+            >> width값이 컨텐츠 양만큼만 차지
+            blockd은 위로 쌓임
+            >> width값이 컨텐츠 양에 상관없이 한줄 100%차지
+            */
+            border:1px solid blue;
+            }
+        hr{
+            height: 10px;
+            border:1px solid red;
+        }
+        
+    </style>
+</head>
+
+<body>
+<div id="wrap">
+   <!--class와 같이 이름을 지어주는 태그지만, id는 무조건 한개만 붙일 수 있다.-->
+    <h1>웹브라우저는 모든 html요소(모든 태그)를 하나의 상자형태로 표현한다</h1>
+    <div>
+        <p>첫번째 문단</p>
+        <p>두번째 문단</p>
+        <p>세번째 문단</p>
+    </div>
+    <p>네번째 문단</p>
+    <p>다섯번째 문단</p>
+    <hr>
+    <span>나는        스팬1</span>
+    <span>나는    스팬2</span>
+    <span>나는 스팬3</span>
+</div>
+
+</body>
+</html>
